@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(controls.DesktopPlayer.Movement.ReadValue<Vector2>());
+        //Debug.Log(controls.DesktopPlayer.Movement.ReadValue<Vector2>());
         headsetMove();
         desktopMove();
     }
@@ -45,7 +45,7 @@ public class Movement : MonoBehaviour
         {
             avatar.transform.Rotate(Vector3.up * 1 * rotationSpeed);
         }
-        if (m.y < -0.9f)
+        if (m.x < -0.9f)
         {
             avatar.transform.Rotate(Vector3.up * -1 * rotationSpeed);
         }
@@ -53,8 +53,28 @@ public class Movement : MonoBehaviour
     private void desktopMove()
     {
         Vector2 input = controls.DesktopPlayer.Movement.ReadValue<Vector2>();
-        Vector3 movement = (input.y * avatar.transform.forward) + (input.x * avatar.transform.right);
-        characterController.Move(movement * moveSpeed * Time.deltaTime);
+        Vector3 movement;
+        //Vector3 movement = (input.y * avatar.transform.forward) + (input.x * avatar.transform.right);
+        //characterController.Move(movement * moveSpeed * Time.deltaTime);
+        if (input.y > 0.9f)
+        {
+            movement = (avatar.transform.forward);
+            characterController.Move(movement * moveSpeed * Time.deltaTime);
+        }
+
+        if (input.y < -0.9f)
+        {
+            movement = (-avatar.transform.forward);
+            characterController.Move(movement * moveSpeed * Time.deltaTime);
+        }
+        if (input.x > 0.9f)
+        {
+            avatar.transform.Rotate(Vector3.up * 1 * rotationSpeed);
+        }
+        if (input.x < -0.9f)
+        {
+            avatar.transform.Rotate(Vector3.up * -1 * rotationSpeed);
+        }
     }
 
     private void OnEnable()
