@@ -1536,8 +1536,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.76978195, y: 1, z: 1}
+  m_Center: {x: -0.115109004, y: 0, z: -1.6104055e-17}
 --- !u!23 &331115636
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5615,7 +5615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatar: {fileID: 1877000479}
   moveSpeed: 2
-  rotationSpeed: 1
+  rotationSpeed: 0.5
 --- !u!1 &1422533773
 GameObject:
   m_ObjectHideFlags: 0
@@ -6808,7 +6808,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 86557e171c13dc345b0efd7b371f3996, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0b91753b93c0bbb4eb1a17efce81dcaa, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8534,8 +8534,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.2717133, y: 23.915783, z: 8.899292}
-  m_Center: {x: 5.1102724, y: 11.696178, z: 5.696307}
+  m_Size: {x: 7.409656, y: 23.97283, z: 8.899292}
+  m_Center: {x: 5.0986824, y: 11.667655, z: 5.6963077}
 --- !u!1 &2003609844283761080
 GameObject:
   m_ObjectHideFlags: 0
